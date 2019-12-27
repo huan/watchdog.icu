@@ -13,6 +13,7 @@ async function main () {
   let loop = true
   while (loop) {
     await new Promise(resolve => setTimeout(resolve, 1000))
+    loop = !!loop
   }
 
   return 0
