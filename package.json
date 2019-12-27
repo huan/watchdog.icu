@@ -34,8 +34,6 @@
   "devDependencies": {
     "@chatie/eslint-config": "^0.8.1",
     "@chatie/git-scripts": "^0.2.5",
-    "@chatie/tsconfig": "^0.6.1",
-    "@types/hapi__hapi": "^18.2.6",
     "tstest": "^0.4.9"
   },
   "git": {
@@ -45,6 +43,8 @@
   },
   "dependencies": {
     "@hapi/hapi": "^18.4.0",
+    "@chatie/tsconfig": "^0.6.1",
+    "@types/hapi__hapi": "^18.2.6",
     "brolog": "^1.8.3",
     "read-pkg-up": "^7.0.1"
   }
