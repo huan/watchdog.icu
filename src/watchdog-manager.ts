@@ -90,7 +90,15 @@ export class WatchdogManager {
       const time = moment().format('MMM Do HH:mm')
       RECORD_LIST.push(`${time} ${text}`)
     } else {
-      return RECORD_LIST.join('<br />')
+      let urlList = [] as string[]
+      for (const url of this.urlMap.keys()) {
+        urlList.push(url)
+      }
+      const html = [
+        urlList.join('<br />'),
+        RECORD_LIST.join('<br />'),
+      ].join('<hr />')
+      return html
     }
   }
 

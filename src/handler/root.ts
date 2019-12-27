@@ -25,6 +25,10 @@ export default function rootHandler (
   Watchdog ICU v${VERSION} is under constructing...
   <br />
   <a href="https://github.com/huan/watchdog.icu/">README</a>
+  <br />
+  <a href="https://dashboard.heroku.com/apps/watchdog-icu/logs">Logs</a>
+  <br />
+
   <hr />
   ${record}
   `
