@@ -1,0 +1,24 @@
+{
+  "name": "Watchdog.ICU",
+  "description": "Watchdog ICU for Your Cloud Service",
+  "repository": "https://github.com/huan/watchdog.icu",
+  "logo": "https://huan.github.io/watchdog/images/watchdog.png",
+  "keywords": [
+    "watchdog",
+    "icu",
+    "cloud",
+    "serverless"
+  ],
+  "website": "https://github.com/huan/watchdog.icu",
+  "success_url": "/",
+  "env": {
+  },
+  "engines": {
+    "node": "10"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

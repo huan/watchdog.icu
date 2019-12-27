@@ -3,8 +3,15 @@
   "version": "0.0.1",
   "description": "Watchdog ICU for your Cloud Service",
   "main": "index.js",
+  "engines": {
+    "node": "10"
+  },
   "scripts": {
-    "test": "echo test"
+    "lint": "npm run lint:es && npm run lint:ts",
+    "lint:es": "eslint --ignore-pattern node_modules/ --ignore-pattern fixtures/ '{bin,examples,src,scripts,tests}/**/*.ts'",
+    "start": "echo -e '\n\nDo not use `npm start` because its buggy with SIGTERM\n\nUse Procfile instead.\n\n' && exit 1",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "blue-tape -r ts-node/register \"src/**/*.spec.ts\" \"src/*.spec.ts\" \"tests/*.spec.ts\" \"tests/**/*.spec.ts\""
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,21 @@
   "bugs": {
     "url": "https://github.com/huan/watchdog.icu/issues"
   },
-  "homepage": "https://github.com/huan/watchdog.icu#readme"
+  "homepage": "https://github.com/huan/watchdog.icu#readme",
+  "devDependencies": {
+    "@chatie/git-scripts": "^0.2.5",
+    "@chatie/tsconfig": "^0.6.1",
+    "@types/hapi__hapi": "^18.2.6",
+    "tstest": "^0.4.9"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "npx git-scripts-pre-push"
+    }
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "brolog": "^1.8.3",
+    "read-pkg-up": "^7.0.1"
+  }
 }
