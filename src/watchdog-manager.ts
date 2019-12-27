@@ -94,9 +94,12 @@ export class WatchdogManager {
       for (const url of this.urlMap.keys()) {
         urlList.push(url)
       }
+
+      let recordList = RECORD_LIST.slice(Math.max(RECORD_LIST.length - 100, 0))
+
       const html = [
         urlList.join('<br />'),
-        RECORD_LIST.join('<br />'),
+        recordList.join('<br />'),
       ].join('<hr />')
       return html
     }
