@@ -7,6 +7,19 @@
 
 Watchdog ICU for your Cloud Service
 
+## How to Use
+
+```shell
+export CALLBACK_URL='https://requestbin.com/r/enfw6dc7yyntj'
+export FEED_URL="https://watchdog.icu/feed/$CALLBACK_URL?timeout=60"
+export CANCEL_URL="https://watchdog.icu/cancel/$CALLBACK_URL"
+curl $FEED_URL
+```
+
+1. After you visted the above `FEED_URL` for the first time, the `CALLBACK_URL` will be called from the Watchdog.ICU in 60 seconds.
+1. To prevent the `CALLBACK_URL` to be called, you have to keep visiting the `FEED_URL` again no more than 60 seconds.
+1. To cancel the watchdog, call `CALCEN_URL`
+
 ## Why Use Hapi
 
 - [How do Express and hapi compare to each other?](https://stackoverflow.com/a/30532321/1123955)
