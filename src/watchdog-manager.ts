@@ -18,7 +18,11 @@ export class WatchdogManager {
     return this.singleton
   }
 
-  ////////////////////////////////////////////////
+  /**
+   * Static
+   * --------
+   * Instance
+   */
 
   private urlMap: Map<string, Watchdog>
 
@@ -89,4 +93,5 @@ export class WatchdogManager {
       return RECORD_LIST.join('<br />')
     }
   }
+
 }

@@ -20,9 +20,10 @@ curl $FEED_URL
 1. To prevent the `CALLBACK_URL` to be called, you have to keep visiting the `FEED_URL` again no more than 60 seconds.
 1. To cancel the watchdog, call `CALCEN_URL`
 
-## Why Use Hapi
+## Resources
 
 - [How do Express and hapi compare to each other?](https://stackoverflow.com/a/30532321/1123955)
+- [A modern request bin to inspect HTTP events](https://requestbin.com)
 
 ## History
 

@@ -16,6 +16,7 @@ export default function cancelHandler (
 
   const url = request.params.url
 
+  const watchdogManager = WatchdogManager.instance()
   const record = watchdogManager.record()
 
   const html = `
@@ -25,7 +26,6 @@ export default function cancelHandler (
   ${record}
   `
 
-  const watchdogManager = WatchdogManager.instance()
   watchdogManager.cancel(url)
 
   return h.response(html)
