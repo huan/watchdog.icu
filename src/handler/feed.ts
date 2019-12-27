@@ -31,6 +31,8 @@ export default function feedHandler (
   const url = request.params.url
 
   const watchdogManager = WatchdogManager.instance()
+  watchdogManager.feed(url, timeout)
+
   const record = watchdogManager.record()
 
   const html = `
@@ -40,8 +42,6 @@ export default function feedHandler (
   <hr />
   ${record}
   `
-
-  watchdogManager.feed(url, timeout)
 
   return h.response(html)
 }
