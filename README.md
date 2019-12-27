@@ -1,5 +1,10 @@
 # watchdog.icu
 
+[![Build Status](https://travis-ci.com/huan/watchdog.icu.svg?branch=master)](https://travis-ci.com/huan/watchdog.icu)
+[![Greenkeeper badge](https://badges.greenkeeper.io/huan/watchdog.icu.svg)](https://greenkeeper.io/)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 Watchdog ICU for your Cloud Service
 
 ## Why Use Hapi
