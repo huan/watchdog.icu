@@ -95,7 +95,7 @@ export class WatchdogManager {
         urlList.push(url)
       }
 
-      let recordList = RECORD_LIST.slice(Math.max(RECORD_LIST.length - 100, 0))
+      let recordList = RECORD_LIST.slice(Math.max(RECORD_LIST.length - 10, 0))
 
       const html = [
         urlList.join('<br />'),
