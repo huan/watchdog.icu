@@ -14,31 +14,31 @@ export default function feedHandler (
     return `${err}`
   }
 
-  const DEFAULT_TIMEOUT = 60
-  const MAX_TIMEOUT = 600
+  const DEFAULT_TIMER = 60
+  const MAX_TIMER = 600
 
-  const s = request.query.timeout as string || '0'
-  let timeout = parseInt(s)
+  const s = request.query.timer as string || '0'
+  let timer = parseInt(s)
 
-  if (timeout <= 0) {
-    timeout = DEFAULT_TIMEOUT
+  if (timer <= 0) {
+    timer = DEFAULT_TIMER
   }
 
-  if (timeout > MAX_TIMEOUT) {
-    timeout = MAX_TIMEOUT
+  if (timer > MAX_TIMER) {
+    timer = MAX_TIMER
   }
 
   const url = request.params.url
 
   const watchdogManager = WatchdogManager.instance()
-  watchdogManager.feed(url, timeout)
+  watchdogManager.feed(url, timer)
 
   const record = watchdogManager.record()
 
   const html = `
   feed url: ${url}
   <br />
-  timeout: ${timeout} ${typeof timeout}
+  timer: ${timer} ${typeof timer}
   <hr />
   ${record}
   `
