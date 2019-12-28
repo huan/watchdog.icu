@@ -12,6 +12,9 @@ Watchdog ICU for your Cloud Service
 > Watchdog: ​a person or group of people whose job is to check that companies are not doing anything illegal or ignoring people’s rights  
 > &mdash; [Oxford Dict](https://www.oxfordlearnersdictionaries.com/definition/english/watchdog)
 
+> A watchdog timer (sometimes called a computer operating properly or COP timer, or simply a watchdog) is an electronic timer that is used to detect and recover from computer malfunctions.  
+> &mdash; [Watchdog timer, Wikipedia](https://en.wikipedia.org/wiki/Watchdog_timer)
+
 The watchdog is used to monitor if a system is running. It is supposed to automatically recover hanged systems due to unrecoverable software errors.
 
 The Watchdog.ICU is useful for systems that are mission critical and need the ability to recover themselves without human intervention. For example, a chatbot service deployed on the cloud servers that need automatic service reset capabilities.
