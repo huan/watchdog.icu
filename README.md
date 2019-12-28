@@ -7,13 +7,31 @@
 
 Watchdog ICU for your Cloud Service
 
+## What is Watchdog.ICU
+
+> Watchdog: ​a person or group of people whose job is to check that companies are not doing anything illegal or ignoring people’s rights  
+> &mdash; [Oxford Dict](https://www.oxfordlearnersdictionaries.com/definition/english/watchdog)
+
+The watchdog is used to monitor if a system is running. It is supposed to automatically recover hanged systems due to unrecoverable software errors.
+
+The Watchdog.ICU is useful for systems that are mission critical and need the ability to recover themselves without human intervention. For example, a chatbot service deployed on the cloud servers that need automatic service reset capabilities.
+
+The Watchdog.ICU can reset the system if serious problems are detected. There needs to be a service that tells the Watchdog.ICU the system is working fine. If the service stops doing that, the webhook URL is called.
+
+Watchdog.ICU functionality on the isolated cloud against your infranstructure, it sets up a timer that times out after a predetermined period. The watchdog software then periodically refreshes the Watchdog.ICU timer. If the software stops refreshing, then after the predetermined period, the timer performs a Webhook URL call.
+
 ## How to Use
 
 ```shell
 export CALLBACK_URL='https://requestbin.com/r/enfw6dc7yyntj'
-export FEED_URL="https://watchdog.icu/feed/$CALLBACK_URL?timeout=60"
+export FEED_URL="https://watchdog.icu/feed/$CALLBACK_URL?timer=60"
 export CANCEL_URL="https://watchdog.icu/cancel/$CALLBACK_URL"
+
+# start watchdog
 curl $FEED_URL
+
+# cancel watchdog
+curl $CANCEL_URL
 ```
 
 1. After you visted the above `FEED_URL` for the first time, the `CALLBACK_URL` will be called from the Watchdog.ICU in 60 seconds.
