@@ -1,7 +1,6 @@
 # watchdog.icu
 
 [![Build Status](https://travis-ci.com/huan/watchdog.icu.svg?branch=master)](https://travis-ci.com/huan/watchdog.icu)
-[![Greenkeeper badge](https://badges.greenkeeper.io/huan/watchdog.icu.svg)](https://greenkeeper.io/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -21,7 +20,7 @@ The Watchdog.ICU is useful for systems that are mission critical and need the ab
 
 The Watchdog.ICU can reset the system if serious problems are detected. There needs to be a service that tells the Watchdog.ICU the system is working fine. If the service stops doing that, the webhook URL is called.
 
-Watchdog.ICU functionality on the isolated cloud against your infranstructure, it sets up a timer that times out after a predetermined period. The watchdog software then periodically refreshes the Watchdog.ICU timer. If the software stops refreshing, then after the predetermined period, the timer performs a Webhook URL call.
+Watchdog.ICU functionality on the isolated cloud against your infrastructure, it sets up a timer that times out after a predetermined period. The watchdog software then periodically refreshes the Watchdog.ICU timer. If the software stops refreshing, then after the predetermined period, the timer performs a Webhook URL call.
 
 ## How to Use
 
@@ -37,7 +36,7 @@ curl $FEED_URL
 curl $CANCEL_URL
 ```
 
-1. After you visted the above `FEED_URL` for the first time, the `RESET_URL` will be called from the Watchdog.ICU in 60 seconds.
+1. After you visited the above `FEED_URL` for the first time, the `RESET_URL` will be called from the Watchdog.ICU in 60 seconds.
 1. To prevent the `RESET_URL` to be called, you have to keep visiting the `FEED_URL` again no more than 60 seconds.
 1. To cancel the watchdog, call `CANCEL_URL`
 
