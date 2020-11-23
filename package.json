@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/huan/watchdog.icu#readme",
   "devDependencies": {
-    "@chatie/eslint-config": "^0.8.1",
-    "@chatie/git-scripts": "^0.2.5",
+    "@chatie/eslint-config": "^0.12.1",
+    "@chatie/git-scripts": "^0.6.1",
     "tstest": "^0.4.9"
   },
   "git": {
@@ -42,11 +42,11 @@
     }
   },
   "dependencies": {
-    "@chatie/tsconfig": "^0.6.1",
-    "@hapi/hapi": "^18.4.0",
-    "@types/hapi__hapi": "^18.2.6",
+    "@chatie/tsconfig": "^0.10.1",
+    "@hapi/hapi": "^20.0.2",
+    "@types/hapi__hapi": "^20.0.2",
     "brolog": "^1.8.3",
-    "file-box": "^0.8.27",
+    "file-box": "^0.16.1",
     "moment": "^2.24.0",
     "read-pkg-up": "^7.0.1",
     "watchdog": "^0.8.17"
