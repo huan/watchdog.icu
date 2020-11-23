@@ -11,8 +11,6 @@ export default function rootHandler (
   // h: ResponseToolkit,
   // err?: Error,
 ) {
-  let html: string
-
   // if (err) {
   //   return `${err}`
   // }
@@ -21,7 +19,7 @@ export default function rootHandler (
 
   const record = watchdogManager.record()
 
-  html = `
+  const html = `
   Watchdog ICU v${VERSION} is under constructing...
   <br />
   <a href="https://github.com/huan/watchdog.icu/">README</a>

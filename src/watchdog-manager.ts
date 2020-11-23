@@ -70,7 +70,7 @@ export class WatchdogManager {
   ): void {
     log.verbose('WatchdogManager', 'cancel(%s)', url)
 
-    let watchdog = this.urlMap.get(url)
+    const watchdog = this.urlMap.get(url)
 
     if (watchdog) {
       watchdog.sleep()
@@ -90,12 +90,12 @@ export class WatchdogManager {
       const time = moment().format('MMM Do HH:mm')
       RECORD_LIST.push(`${time} ${text}`)
     } else {
-      let urlList = [] as string[]
+      const urlList = [] as string[]
       for (const url of this.urlMap.keys()) {
         urlList.push(url)
       }
 
-      let recordList = RECORD_LIST.slice(Math.max(RECORD_LIST.length - 10, 0))
+      const recordList = RECORD_LIST.slice(Math.max(RECORD_LIST.length - 10, 0))
 
       const html = [
         urlList.join('<br />'),
