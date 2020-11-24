@@ -1,6 +1,6 @@
 {
   "name": "watchdog.icu",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Watchdog ICU for your Cloud Service",
   "main": "index.js",
   "engines": {
