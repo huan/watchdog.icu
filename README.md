@@ -26,7 +26,7 @@ Watchdog.ICU functionality on the isolated cloud against your infrastructure, it
 
 ```shell
 export RESET_URL='https://requestbin.com/r/enfw6dc7yyntj'
-export FEED_URL="https://watchdog.icu/feed/$RESET_URL?timer=60"
+export FEED_URL="https://watchdog.icu/feed/$RESET_URL?timeout=60"
 export CANCEL_URL="https://watchdog.icu/cancel/$RESET_URL"
 
 # start watchdog

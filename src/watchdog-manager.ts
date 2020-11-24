@@ -48,7 +48,7 @@ export class WatchdogManager {
 
         this.record(`reset ${url}`)
 
-        await FileBox.fromUrl(url).toBase64()
+        await FileBox.fromUrl(url).toBuffer()
       })
 
       this.record(`feed(${url}, ${seconds}) watchdog created`)
