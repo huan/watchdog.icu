@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/huan/watchdog.icu#readme",
   "devDependencies": {
-    "@chatie/eslint-config": "^0.12.1",
+    "@chatie/eslint-config": "^0.16.2",
     "@chatie/git-scripts": "^0.6.1",
     "tstest": "^0.4.9"
   },
